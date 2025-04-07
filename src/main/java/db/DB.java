@@ -1,6 +1,5 @@
 package db;
 
-import org.example.db.DbException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -28,7 +27,7 @@ public class DB {
             try {
                 connection.close();
             } catch (SQLException e) {
-                throw new DbException(e.getMessage());
+                throw new db.DbException(e.getMessage());
             }
         }
     }
@@ -39,7 +38,7 @@ public class DB {
             ps.load(fs);
             return ps;
         } catch (IOException e) {
-            throw new DbException(e.getMessage());
+            throw new db.DbException(e.getMessage());
         }
     }
 
@@ -48,7 +47,7 @@ public class DB {
             try {
                 st.close();
             } catch (SQLException e) {
-                throw new DbException(e.getMessage());
+                throw new db.DbException(e.getMessage());
             }
         }
     }
@@ -58,7 +57,7 @@ public class DB {
             try {
                 rs.close();
             } catch (SQLException e) {
-                throw new DbException(e.getMessage());
+                throw new db.DbException(e.getMessage());
             }
         }
     }
