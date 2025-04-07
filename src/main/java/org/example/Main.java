@@ -1,7 +1,10 @@
 package org.example;
 
+import org.example.model.entities.Department;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Department obj = new Department(1, "Books");
+        System.out.println(obj);
     }
 }
